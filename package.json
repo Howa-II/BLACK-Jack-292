@@ -1,0 +1,20 @@
+{
+  "name": "black-jack-292",
+  "version": "1.0.0",
+  "description": "BLACK JACK 292 - custom 7-hand Blackjack game with hidden card mechanics",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express-session": "^1.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
