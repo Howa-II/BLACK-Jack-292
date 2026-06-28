@@ -1,0 +1,243 @@
+/* main.css — BLACK JACK 292 base layout */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0b1d0f;
+  color: #eee;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #07140a;
+  border-bottom: 2px solid #2a2a2a;
+}
+
+.dealer-name {
+  display: block;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Main bot name: lighter tint of the brand color */
+.dealer-name-main {
+  color: #ff6fa3;
+  font-size: 18px;
+}
+
+/* Sub name: exact brand color, required */
+.dealer-name-sub {
+  color: #FF0058;
+  font-size: 13px;
+}
+
+.balance {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.tabs {
+  display: flex;
+  background: #111;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 15px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+  color: #fff;
+  border-bottom-color: #ffd700;
+}
+
+.tab-panel { display: none; padding: 16px; }
+.tab-panel.active { display: block; }
+
+.panel {
+  background: #102213;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.hidden { display: none !important; }
+
+.action-btn {
+  padding: 10px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 6px;
+  background: #ffd700;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-btn.secondary {
+  background: #444;
+  color: #eee;
+}
+
+.action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.action-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.dealer-area, .hands-area {
+  margin-bottom: 16px;
+}
+
+.hand-block {
+  background: #0e1a10;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.hand-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 6px;
+}
+
+.chip-tray {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.chip {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #b8860b, #6b4f00);
+  color: #fff;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #fff8dc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chip.selected {
+  outline: 3px solid #ffd700;
+}
+
+.reveal-quota {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 8px;
+}
+
+.result-banner {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 360px;
+}
+
+.account-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #eee;
+}
+
+.form-errors {
+  color: #ff5d5d;
+  font-size: 13px;
+}
+
+.form-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+.link-btn.active {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.leaderboard-entry {
+  background: #0e1a10;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.leaderboard-entry .name-line {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.leaderboard-entry .stat-line {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #102213;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 85%;
+  overflow-y: auto;
+}
